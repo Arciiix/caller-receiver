@@ -1,0 +1,178 @@
+body {
+  background-color: #14bdac;
+}
+
+.container {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.activeStatusMessage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.activeDot {
+  border-radius: 50%;
+  text-align: center;
+}
+
+.active {
+  background-color: #62db52;
+}
+.inactive {
+  background-color: #eb2c1e;
+}
+.textActive {
+  color: #62db52;
+}
+.textInactive {
+  color: #eb2c1e;
+}
+
+.messageForm {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .activeStatus {
+    margin: 2vh;
+  }
+  .activeDot {
+    width: 3vw;
+    height: 3vw;
+  }
+  .activeText {
+    line-height: 6.5vw;
+    font-size: 8vw;
+    margin-left: 2vw;
+  }
+  .messageAlert {
+    width: 100%;
+  }
+  .alertHeader {
+    font-size: 12.5vw;
+  }
+  .messageBody {
+    font-size: 10vw;
+  }
+  .messageForm {
+    bottom: 2vh;
+  }
+  .messageInput {
+    font-size: 10vw;
+    line-height: 10vw;
+    width: 70%;
+  }
+  .sendBtn {
+    margin-left: 2vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .activeDot {
+    width: 2vw;
+    height: 2vw;
+  }
+  .activeText {
+    line-height: 5vw;
+    font-size: 5vw;
+    margin-left: 2vw;
+  }
+  .activeStatusMessage {
+    margin-bottom: -20vh;
+  }
+  .messageAlert {
+    width: 100%;
+  }
+  .alertHeader {
+    font-size: 5vw;
+  }
+  .messageBody {
+    font-size: 5vw;
+  }
+  .messageForm {
+    bottom: 2vh;
+  }
+  .messageInput {
+    font-size: 3vw;
+    line-height: 5vw;
+    width: 70%;
+  }
+  .sendBtn {
+    margin-left: 2vw;
+    width: 50%;
+    font-size: 3vw;
+  }
+}
+@media (min-width: 1200px) {
+  .activeStatus {
+    display: none;
+  }
+
+  .activeText {
+    line-height: 5vw;
+    font-size: 5vw;
+    margin-left: 2vw;
+  }
+  .messageAlert {
+    width: 100%;
+  }
+  .alertHeader {
+    font-size: 5vw;
+  }
+  .messageBody {
+    font-size: 3vw;
+  }
+  .messageForm {
+    bottom: 2vh;
+  }
+  .messageInput {
+    font-size: 3vw;
+    line-height: 3vw;
+    width: 70%;
+  }
+  .sendBtn {
+    margin-left: 2vw;
+    width: 50%;
+    font-size: 3vw;
+  }
+}
+@media only screen and (max-height: 400px) {
+  .activeStatusMessage {
+    display: none;
+  }
+  .messageAlert {
+    width: 100%;
+    position: absolute;
+    top: 10px;
+  }
+  .alertHeader {
+    display: none;
+  }
+  .messageBody {
+    font-size: 3vw;
+  }
+  .messageForm {
+    bottom: 2vh;
+  }
+  .messageInput {
+    font-size: 2vw;
+    line-height: 3vw;
+    width: 70%;
+  }
+  .sendBtn {
+    margin-left: 2vw;
+    width: 50%;
+    font-size: 2vw;
+  }
+}

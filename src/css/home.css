@@ -1,0 +1,44 @@
+body {
+  background-color: #14bdac;
+}
+
+.container {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.alert {
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .alert {
+    width: 80vw;
+  }
+  .alertTitle {
+    font-size: 7vw;
+  }
+  .message {
+    font-size: 4vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .alert {
+    width: 60vw;
+  }
+  .alertTitle {
+    font-size: 4vw;
+  }
+  .message {
+    font-size: 2vw;
+  }
+  .buttons {
+    height: 10vh;
+    font-size: 5vh;
+  }
+}
