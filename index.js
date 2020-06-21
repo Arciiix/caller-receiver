@@ -3,8 +3,6 @@ const app = express();
 
 const player = require("node-wav-player");
 
-const path = require("path");
-
 const localPort = 8383; //This is a port used when deploying the app on local machine.
 const port = process.env.PORT || localPort; //This is the final port - local (look higher) or auto (when on the hosting service)
 
@@ -20,7 +18,8 @@ const server = app.listen(port, () => {
 const room = "default";
 
 let lastMessage = "";
-let lastName = "";
+
+console.clear();
 
 //Set the static path to the path of the site
 app.use(express.static("./build/"));
