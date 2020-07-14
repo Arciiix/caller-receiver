@@ -14,6 +14,7 @@ class Home extends React.Component {
   }
   componentDidMount() {
     this.socket = io("");
+    this.socket.emit("getMessage");
     this.socket.on("message", (data) => {
       this.setState(
         {

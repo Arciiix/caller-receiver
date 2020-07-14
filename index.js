@@ -18,6 +18,7 @@ const server = app.listen(port, () => {
 const room = "default";
 
 let lastMessage = "";
+let lastName = "";
 
 console.clear();
 
@@ -54,9 +55,6 @@ socket.on("calling", async (data) => {
     status: "received",
     room: room,
   });
-  setTimeout(() => {
-    io.sockets.emit("message", { message: data.message, name: data.name });
-  }, 2000);
 });
 
 socket.on("message", (content) => {
@@ -109,6 +107,12 @@ io.on("connection", (client) => {
       message: message,
       room: room,
     });
+  });
+
+  client.on("getMessage", () => {
+    if (lastMessage) {
+      client.emit("message", { message: lastMessage, name: lastName });
+    }
   });
 });
 
