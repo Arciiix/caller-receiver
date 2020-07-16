@@ -43,7 +43,82 @@ body {
   justify-content: center;
 }
 
+.messages {
+  display: flex;
+  flex-direction: column;
+  width: 98vw;
+  height: 80%;
+  position: absolute;
+  top: 5px;
+  overflow-y: auto;
+}
+
+.bubble {
+  display: flex;
+  overflow: auto;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  word-wrap: break-word;
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+.bubble-left {
+  margin-left: 0;
+  background-color: #34e2ab;
+}
+
+.bubble-right {
+  margin-left: auto;
+  background-color: white;
+}
+
+.messageText {
+  word-wrap: break-word;
+  text-align: center !important;
+  vertical-align: middle;
+}
+
+.icon {
+  color: white;
+  position: fixed;
+  top: 0px;
+  transition: 0.25s color;
+}
+.icon:hover {
+  color: #c6fffc;
+  cursor: pointer;
+}
+.icon:active {
+  color: #a4fffa;
+  cursor: pointer;
+}
+
+.iconLeft {
+  left: 0px;
+  top: -10px;
+}
+.iconRight {
+  right: 10px;
+}
+
 @media only screen and (max-width: 768px) {
+  .bubble {
+    width: 60vw;
+    min-height: 12.5vh;
+    margin-top: 3vh;
+    padding: 1vw;
+  }
+  .messageText {
+    width: 50vw;
+    font-size: 6vw;
+  }
+
+  .icon {
+    font-size: 10vw;
+  }
   .activeStatus {
     margin: 2vh;
   }
@@ -79,6 +154,20 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  .bubble {
+    width: 60vw;
+    min-height: 12.5vh;
+    margin-top: 3vh;
+    padding: 1vw;
+  }
+  .messageText {
+    width: 50vw;
+    font-size: 4vw;
+  }
+
+  .icon {
+    font-size: 7vw;
+  }
   .activeDot {
     width: 2vw;
     height: 2vw;
@@ -115,6 +204,20 @@ body {
   }
 }
 @media (min-width: 1200px) {
+  .bubble {
+    width: 60vw;
+    min-height: 10vh;
+    margin-top: 3vh;
+    padding: 0.2vw;
+  }
+  .messageText {
+    width: 50vw;
+    font-size: 1.5vw;
+  }
+
+  .icon {
+    font-size: 4vw;
+  }
   .activeStatus {
     display: none;
   }
@@ -148,13 +251,17 @@ body {
   }
 }
 @media only screen and (max-height: 400px) {
+  .messages {
+    display: none;
+  }
+  .icon {
+    display: none;
+  }
   .activeStatusMessage {
     display: none;
   }
   .messageAlert {
-    width: 100%;
-    position: absolute;
-    top: 10px;
+    display: none;
   }
   .alertHeader {
     display: none;
@@ -166,13 +273,13 @@ body {
     bottom: 2vh;
   }
   .messageInput {
-    font-size: 2vw;
+    font-size: 50vh;
     line-height: 3vw;
-    width: 70%;
+    width: 60vw;
+    height: 80vh;
   }
   .sendBtn {
     margin-left: 2vw;
-    width: 50%;
-    font-size: 2vw;
+    width: 20vw;
   }
 }
